@@ -65,3 +65,32 @@ connection.phpで定義した変数$dbhの中には何を格納したでしょ�
 
 ## getTodoList()の返り値について説明してください。
  - getTodoList()はgetAllRecords()をreturnしているので、getAllRecords()の戻り値であるtodoが入った配列を返しています。
+
+
+
+# PHP APP Update Page
+
+## parse_url関数の返り値のデータ型は以下の選択肢のうちどれでしょうか？
+① 連想配列     ② 文字列     ③ Urlオブジェクト     ④ PDOインスタンス
+ - ①
+
+## 遷移先にGETでデータを送るときにURLに付与する?以下をなんと言いますか？
+① クエリビルダ     ② クエリパラメータ     ③ クエリアンカー     ④ クエリゲット
+ - ②
+
+## $_GETや$_SERVERのように、$_で始まる特殊な変数のことをなんと呼びますか？
+① インスタンス変数     ② ハイパーテキスト変数     ③ スーパーグローバル変数     ④ スタンダードPHP変数
+ - ③
+
+## 以下のaタグのリンクを押下した際にedit.phpの$_GETにどんな値が格納されるか説明してください。
+
+```<a href="edit.php?todo_id=123&todo_content=焼肉">更新</a>```
+
+ - todo_id => 123, todo_content => "焼肉" の連想配列が格納されます。
+
+## savePostedData($post)は何をしているか説明してください。
+ - $_POSTされたデータを受け取り、getRefererPath()から返されたパスを元に条件分岐し、connection層(DB層)へpostされたデータを渡しています。
+
+## getRefererPath()は何をしているか説明してください。
+-  スーパーグローバル変数である $_SERVER の key 'HTTP_REFERER' の valueを parse_urlに引数として渡します。parse_urlからreturnされた「URLの様々な構成要素のうち特定できるものが入った連想配列」のkeyが'path' の value を return しています。
+

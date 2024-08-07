@@ -28,6 +28,8 @@
  - ./index.phpへリダイレクトされます。
 
 ### `getRefererPath()`は何をしているか説明してください。
+ -  スーパーグローバル変数である $_SERVER の key 'HTTP_REFERER' の valueを parse_urlに引数として渡します。parse_urlからreturnされた「URLの様々な構成要素のうち特定できるものが入った連想配列」のkeyが'path' の value を return しています。
+
 
 ### `connectPdo()` の返り値は何か、またこの記述は何をするための記述か説明してください。
  - connectPdo()関数の戻り値はPDOのインスタンスです。PHPとデータベースサーバーの接続し、connectPdo()関数の戻り値であるPDOのインスタンスを取得するためのコードです。
@@ -55,8 +57,14 @@
 ## 更新
 
 ### `getSelectedTodo($_GET['id'])`の返り値は何か、またなぜ`$_GET['id']` を引数に渡すのか説明してください。
+ - getSelectedTodo()の戻り値は、引数で渡したidに紐付いてるtodoのcontentです。
+ - connection層でselect文を使う際にidを絞ってtodoを取得しているので`getSelectedTodo($_GET['id'])`でgetメソッドで送られた連想配列のkeyがidのvalueを渡します。
 
 ### `updateTodoData($post)`は何をしているか説明してください。
+ -　updateするのに必要なtodoのidとcontentが入った連想配列を引数で受け取ります。
+    connectPdo() でDBに接続し、PDOインスタンスをdbh変数に格納します。
+    引数で受け取ったデータをsql文に埋め込み、変数sqlに格納します。
+    最後にPDOインスタンスのメソッドであるqueryでsqlを実行しています。
 
 ## 削除
 
