@@ -14,7 +14,6 @@ define('DB_PASSWORD', '0420'); // TODO: あとで.envファイル
 
 function errorHandler($errNo, $errStr, $errFile, $errLine)
 {
-    echo "HERE!\n";
     if ($errNo === E_NOTICE || $errNo === E_WARNING) {
         $errTitle = $errNo === E_NOTICE ? 'Notice' : 'Warning';
         $escapedErrStr = htmlspecialchars($errStr);
