@@ -58,3 +58,12 @@ function getTodoTextById($id) {
     return $data['content'];
 }
 
+function deleteTodoData($id)
+{
+    $dbh = connectPdo();
+    date_default_timezone_set ('Asia/Tokyo');
+    $now = date('Y-m-d H:i:s');
+    $sql = 'UPDATE todos SET deleted_at = "' . $now . '" WHERE id = ' . $id;
+    $dbh->query($sql);
+}
+
