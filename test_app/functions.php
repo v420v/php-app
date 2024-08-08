@@ -1,7 +1,10 @@
 <?php
 
-declare(strict_types=1);
 require_once('connection.php');
+
+function e($text) {
+    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+}
 
 /*
     getTodoList 関数は、getAllRecords 関数を呼び出し、その戻り値である配列型のtodosレコードを返しています。
