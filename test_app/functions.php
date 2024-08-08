@@ -40,6 +40,7 @@ function getSelectedTodo($id) {
 
 function savePostedData($post) {
     checkToken($post['token']);
+    validate($post);
     $path = getRefererPath();
     switch ($path) {
         case '/new.php':
@@ -53,6 +54,13 @@ function savePostedData($post) {
             break;
         default:
             break;
+    }
+}
+
+function validate($post) {
+    if (isset($post['content']) && $post['content'] === '') {
+        $_SESSION['err'] = '入力がありません';
+        redirectToPostedPage();
     }
 }
 
