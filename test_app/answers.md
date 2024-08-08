@@ -139,3 +139,20 @@ connection.phpで定義した変数$dbhの中には何を格納したでしょ�
  - `htmlspecialchars()` に `<script>console.log()<script>` を渡すと `&lt;script&gt;console.log()&lt;/script&gt;` に変換しブラウザはこの文字列を単なるテキストとして表示しますので、スクリプトは実行されません。
 
 
+# CSRF
+## CSRFとはどんな攻撃か、また攻撃者にどんなメリットがあるか説明してください。
+ - 
+
+## SessionとCookieの違いを説明してください。
+ - 
+
+## setToken()は何をしているか説明してください。
+ - 
+
+## checkToken()は何をしているか説明してください。
+ - 
+
+## トークンを使うことでなぜCSRFが防げるのか説明してください。
+ - 
+
+
