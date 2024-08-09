@@ -145,7 +145,7 @@
  - sessionはサーバー側管理する一時的な情報でcookieはブラウザで管理で管理する情報です。
 
 ## setToken()は何をしているか説明してください。
- - スーパーグローバル変数である`_SESSION`のキー'token'にbin2hexから返されたopenssl_random_pseudo_bytesを引数で使ったtokenを格納しています。
+ - スーパーグローバル変数である`_SESSION`のキー'token'にbin2hexから返されたopenssl_random_pseudo_bytesを引数で作ったtokenを格納しています。
 
 ## checkToken()は何をしているか説明してください。
  - empty 関数を使い$_SESSION['token']が存在するかまたは$_SESSION['token']がインプットから受け取った$tokenと一致しているかを確認し、一致していなかったらまたは$_SESSION['token']が存在しない場合、$_SESSION['err']にエラー文を格納しリクエスト元へリダイレクトしています。
