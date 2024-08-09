@@ -39,7 +39,7 @@
 
 
 
-connection.phpで定義した変数$dbhの中には何を格納したでしょうか？
+## connection.phpで定義した変数$dbhの中には何を格納したでしょうか？
 ① PDO文字列     ② PDOクラス     ③ PDO配列     ④ PDOインスタンス
 
  - ④
@@ -142,7 +142,7 @@ connection.phpで定義した変数$dbhの中には何を格納したでしょ�
  - 不特定多数の人に対して意図しないリクエスト送信をさせる攻撃です。攻撃者は不特定多数の人に任意のリクエスト送信させるメリットがあります。
 
 ## SessionとCookieの違いを説明してください。
- - Cookieはブラウザで管理されますが、Sessionはサーバー側で管理しています。
+ - sessionはサーバー側管理する一時的な情報でcookieはブラウザで管理で管理する情報です。
 
 ## setToken()は何をしているか説明してください。
  - スーパーグローバル変数である`_SESSION`のキー'token'にbin2hexから返されたopenssl_random_pseudo_bytesを引数で使ったtokenを格納しています。
